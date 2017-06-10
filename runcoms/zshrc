@@ -26,3 +26,9 @@ source /usr/bin/aws_zsh_completer.sh
 
 # Rust source path
 export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src
+
+# i3lock
+alias i3lock='i3lock -c 000000'
+
+# keychain
+eval $(keychain --eval --quiet id_rsa)
