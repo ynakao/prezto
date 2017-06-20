@@ -30,3 +30,6 @@ source ~/.local/bin/aws_zsh_completer.sh
 export PATH="$HOME/.cargo/bin:$PATH"
 # Rust source path
 export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src
+
+# keychain
+eval $(keychain --eval --quiet --noask id_rsa)
