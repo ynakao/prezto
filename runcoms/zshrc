@@ -31,4 +31,6 @@ export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src
 alias i3lock='i3lock -c 000000'
 
 # keychain
-eval $(keychain --eval --quiet id_rsa)
+eval $(keychain --eval --quiet --noask id_rsa)
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
