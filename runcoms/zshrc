@@ -11,3 +11,26 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+# rustup completion
+# https://github.com/rust-lang-nursery/rustup.rs#enable-tab-completion-for-bash-fish-or-zsh
+fpath+=~/.zfunc
+
+alias ta='tmux attach'
+
+# Golang settings
+export GOPATH=~/go
+export PATH=$PATH:~/go/bin
+
+# aws-cli command completion
+source /usr/bin/aws_zsh_completer.sh
+
+# Rust source path
+export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src
+
+# i3lock
+alias i3lock='i3lock -c 000000'
+
+# keychain
+eval $(keychain --eval --quiet --noask id_rsa)
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
